@@ -14,5 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data=[
+        'user'=>[
+            'name'=> 'Booleanc',
+            'email'=> 'yq7p4@example.com',
+        ]
+    ];
+
+    
+    return view('home',$data,
+    [
+        'name' => 'Booleanc',
+        'message' => 'Ciao, sono Booleanc!',
+    ]);
+
+});
+Route::get('/contatti', function () {
+    return view('contact');
 });
